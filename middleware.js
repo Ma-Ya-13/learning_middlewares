@@ -1,6 +1,4 @@
-//git add .
-// git commit -m "refactor authentication into middleware"
-// git push
+
 const express = require("express");
 const app = express();
 
