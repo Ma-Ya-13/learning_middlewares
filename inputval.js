@@ -9,12 +9,12 @@ const  app = express(); // created the instanece of the express
     res.send("you have " + kidneylength + " kidneys " );   
 
    });
-   // if user gave any  invald 
-   // global catches  // error based middlewares defined at the end of program  with 2 arguemnts in funtion 
+   // if user gave any  invald  input 
+   // global catches  // error based middlewares defined at the end of program  with 4 arguemnts in function 
    app.use(function(err, req , res , next){
     res.status(500).json({
       msg: "Invalid Credentials" //  if user doesnt gave kidney as  array we will se this message 
-      // without expsoing the backened  logic in error 
+      // without expsoing the backened  logic in error  to cient in frontend
 
     });
 
