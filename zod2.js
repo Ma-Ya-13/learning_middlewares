@@ -1,7 +1,20 @@
 const express = require("express");
 const zod = require("zod");
 const  app = express(); 
-  const schema = zod.array(zod.number());
+/*  MAKe  a zod input validaion schema 
+      email: string =>email
+      password  : atlest8 letter 
+      country : "IN" , "US".
+*/
+
+ 
+    const schema = zod.object({
+            email=z.string(),
+            password= z.string(),
+            country = z.literal("IN").or(z.literal("US")),
+            kidney=z.array(z.number())
+
+    }); 
  app.use(express.json()); 
    app.post("/health-checkup" , function(req,res){
     
