@@ -1,4 +1,5 @@
 const express = require("express");
+
 const  app = express(); // created the instanece of the express 
   
  app.use(express.json()); // using a express.json middleware to  use post
